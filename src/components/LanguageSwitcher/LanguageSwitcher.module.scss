@@ -1,0 +1,21 @@
+.switcher {
+  background-color: transparent;
+  border: 1.5px solid #626F47; // Темно-оливковий
+  color: #626F47;
+  padding: 8px 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: #626F47;
+    color: #FEFAE0;
+  }
+}

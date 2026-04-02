@@ -1,0 +1,6 @@
+.next
+dist
+node_modules
+*.config.js
+*.config.mjs
+public
