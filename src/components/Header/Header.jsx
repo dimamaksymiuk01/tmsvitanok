@@ -33,10 +33,6 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
-  }, [isMenuOpen]);
-
   const menuVariants = {
     closed: { opacity: 0, y: '-100%', transition: { duration: 0.5, ease: 'easeInOut' } },
     open: {

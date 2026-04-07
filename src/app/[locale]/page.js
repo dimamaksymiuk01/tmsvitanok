@@ -10,16 +10,14 @@ const Home = () => {
 
   return (
     <>
-      {/* Лоадер працює окремо */}
       {!isLoaderFinished && <DawnLoader onComplete={() => setIsLoaderFinished(true)} />}
 
-      {/* Основний контент */}
       <div
         style={{
           opacity: isLoaderFinished ? 1 : 0,
-          visibility: isLoaderFinished ? 'visible' : 'hidden', // Додатковий захист
+          visibility: isLoaderFinished ? 'visible' : 'hidden',
           transition: 'opacity 0.8s ease, visibility 0.8s ease',
-          backgroundColor: 'var(--color-bg)', // Використовуємо твій колір
+          backgroundColor: 'var(--color-bg)',
           minHeight: '100vh',
         }}
       >

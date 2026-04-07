@@ -18,6 +18,7 @@
   --shadow-pill: 0 10px 25px rgba(0, 0, 0, 0.04), 0 4px 6px rgba(164, 180, 101, 0.1);
   --shadow-dropdown: 0 20px 50px rgba(0, 0, 0, 0.12);
   --shadow-btn: 0 4px 12px rgba(191, 107, 76, 0.2);
+  --glow-accent: 0 0 20px 5px rgba(255, 207, 80, 0.5), 0 0 40px 10px rgba(255, 207, 80, 0.3);
 }
 
 *,
@@ -76,5 +77,5 @@ button {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
