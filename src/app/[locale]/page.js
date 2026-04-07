@@ -1,37 +1,54 @@
 'use client';
 
 import { useState } from 'react';
-import DawnLoader from "@/components/DawnLoader/DawnLoader";
-import Hero from "@/components/Hero/Hero";
-import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcher";
+import DawnLoader from '@/components/DawnLoader/DawnLoader';
+import Header from '@/components/Header/Header';
+import Hero from '@/components/Hero/Hero';
 
 const Home = () => {
-    const [isLoaderFinished, setIsLoaderFinished] = useState(false);
+  const [isLoaderFinished, setIsLoaderFinished] = useState(false);
 
-    return (
-        <>
-            {!isLoaderFinished && (
-                <DawnLoader onComplete={() => setIsLoaderFinished(true)} />
-            )}
+  return (
+    <>
+      {/* Лоадер працює окремо */}
+      {!isLoaderFinished && <DawnLoader onComplete={() => setIsLoaderFinished(true)} />}
 
-            <div
-                style={{
-                    opacity: isLoaderFinished ? 1 : 0,
-                    transition: 'opacity 0.8s ease',
-                    backgroundColor: '#FEFAE0',
-                    minHeight: '100vh'
-                }}
-            >
-                <header style={{ position: 'absolute', top: 0, right: 0, padding: '2rem', zIndex: 10 }}>
-                    <LanguageSwitcher />
-                </header>
+      {/* Основний контент */}
+      <div
+        style={{
+          opacity: isLoaderFinished ? 1 : 0,
+          visibility: isLoaderFinished ? 'visible' : 'hidden', // Додатковий захист
+          transition: 'opacity 0.8s ease, visibility 0.8s ease',
+          backgroundColor: 'var(--color-bg)', // Використовуємо твій колір
+          minHeight: '100vh',
+        }}
+      >
+        <Header />
 
-                <main>
-                    <Hero />
-                </main>
-            </div>
-        </>
-    );
+        <main className="container" style={{ paddingTop: '100px' }}>
+          <div id="hero">
+            <Hero />
+          </div>
+
+          <section id="about" style={{ minHeight: '100vh', padding: '100px 0' }}>
+            <h2>Про нас</h2>
+          </section>
+
+          <section id="services" style={{ minHeight: '100vh', padding: '100px 0' }}>
+            <h2>Напрямки</h2>
+          </section>
+
+          <section id="gallery" style={{ minHeight: '100vh', padding: '100px 0' }}>
+            <h2>Галерея</h2>
+          </section>
+
+          <section id="contacts" style={{ minHeight: '100vh', padding: '100px 0' }}>
+            <h2>Контакти</h2>
+          </section>
+        </main>
+      </div>
+    </>
+  );
 };
 
 export default Home;
