@@ -15,5 +15,38 @@
     "gallery": "Gallery",
     "contacts": "Contacts",
     "connect": "Connect"
+  },
+  "About": {
+    "preTitle": "Our philosophy",
+    "title": "More than simple",
+    "titleHighlight": "workshop",
+    "description1": "Svitanok - is a space created with love for details and boundless respect for art. We believe that every voice should sound special, so we have created ideal conditions where your true potential is revealed.",
+    "description2": "Our team is a small creative family. We combine a professional approach, modern methods and an incredibly warm atmosphere so that each lesson inspires you to new achievements and gives joy.",
+    "feature1": "Creative freedom",
+    "feature2": "Professional mentors",
+    "feature3": "Unique atmosphere"
+  },
+  "Directions": {
+    "preTitle": "Workshop Directions",
+    "title": "Choose your",
+    "titleHighlight": "path",
+    "item1Title": "Vocals for Kids and Adults",
+    "item1Desc": "Individual lessons for all ages. Discover your unique timbre, master breathing, and learn professional vocal techniques in a comfortable atmosphere.",
+    "item2Title": "Early Musical Development",
+    "item2Desc": "Engaging group classes for toddlers. Through play, we introduce children to the world of music, developing their sense of rhythm, hearing, and coordination.",
+    "item3Title": "Vocal Ensemble 'Svitanok'",
+    "item3Desc": "Singing in harmony and developing teamwork skills. A great opportunity to make friends and create a unique shared sound.",
+    "item4Title": "Speech Therapy",
+    "item4Desc": "Professional speech diagnostics and correction. We help overcome pronunciation defects, expand vocabulary, and develop expressive articulation.",
+    "item5Title": "Art Workshop",
+    "item5Desc": "A space for free self-expression. We teach the basics of painting, composition, and help everyone find their own visual style.",
+    "item6Title": "Preschool Preparation",
+    "item6Desc": "A comprehensive program for future first-graders. Reading, writing, basic math, and soft psychological adaptation to the learning process.",
+    "item7Title": "Successful Student Club",
+    "item7Desc": "Support for students in grades 1-4 (individual and group). Help with homework, deepening knowledge, and developing logical thinking.",
+    "item8Title": "Musical Instruments",
+    "item8Desc": "Piano and guitar lessons. From your first chords to confidently playing your favorite melodies with an understanding of music theory.",
+    "item9Title": "Acting & Drama",
+    "item9Desc": "Unleashing charisma, releasing physical tension, and mastering stage speech. Learn to improvise and confidently hold an audience."
   }
 }

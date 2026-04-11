@@ -1,0 +1,162 @@
+.directions {
+  padding: 10rem 0;
+  background-color: var(--color-bg); // Або var(--color-white) для контрасту
+  position: relative;
+  overflow: hidden;
+}
+
+/* === КЛАСИЧНИЙ ЦЕНТРОВАНИЙ ХЕДЕР === */
+.header {
+  text-align: center;
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-terracotta);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  color: var(--color-text-dark);
+  font-family: var(--font-heading);
+
+  .highlight {
+    color: var(--color-olive-light);
+  }
+}
+
+/* === ВЕЛИКИЙ СПИСОК === */
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.listItem {
+  position: relative;
+  padding: 3rem 0;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 350px 1fr; // Трохи більше місця для фото
+  gap: 5rem;
+  align-items: center;
+
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 0;
+  }
+}
+
+/* === ЗОБРАЖЕННЯ === */
+.imageRevealWrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 991px) {
+    display: none; // На мобільних ховаємо зображення
+  }
+}
+
+.revealedImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  z-index: 2;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* === ТЕКСТ === */
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+.itemNum {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(234, 182, 118, 0.5); // Напівпрозора теракота
+  font-family: var(--font-heading);
+  transition: color 0.3s ease;
+}
+
+.itemTitle {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-family: var(--font-heading);
+  color: var(--color-text-dark);
+  margin: 0;
+  transition: color 0.3s ease, transform 0.4s ease;
+  transform-origin: left center;
+}
+
+/* Ефекти при наведенні на рядок */
+.listItem:hover .itemTitle {
+  color: var(--color-terracotta);
+  transform: translateX(20px);
+}
+
+.listItem:hover .itemNum {
+  color: var(--color-terracotta);
+}
+
+.activeTitle {
+  color: var(--color-terracotta);
+  transform: translateX(20px);
+}
+
+.descWrapper {
+  overflow: hidden;
+  margin-left: calc(1.5rem + 2rem);
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+.itemDesc {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 1.5rem 0 0 0;
+  max-width: 700px;
+}
+
+/* === РОЗДІЛЮВАЧ === */
+.divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: background-color 0.4s ease, height 0.4s ease;
+}
+
+.listItem:hover .divider {
+  background-color: var(--color-terracotta);
+  height: 2px; // Робимо лінію трохи товщою при наведенні
+}

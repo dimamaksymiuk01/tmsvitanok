@@ -4,6 +4,9 @@ import { useState } from 'react';
 import DawnLoader from '@/components/DawnLoader/DawnLoader';
 import Header from '@/components/Header/Header';
 import Hero from '@/components/Hero/Hero';
+import About from '@/components/About/About';
+import ScrollProgress from '@/components/ScrollProgress/ScrollProgress';
+import Directions from '@/components/Directions/Directions';
 
 const Home = () => {
   const [isLoaderFinished, setIsLoaderFinished] = useState(false);
@@ -21,6 +24,7 @@ const Home = () => {
           minHeight: '100vh',
         }}
       >
+        <ScrollProgress />
         <Header />
 
         <main className="container" style={{ paddingTop: '100px' }}>
@@ -28,12 +32,12 @@ const Home = () => {
             <Hero />
           </div>
 
-          <section id="about" style={{ minHeight: '100vh', padding: '100px 0' }}>
-            <h2>Про нас</h2>
+          <section id="about">
+            <About />
           </section>
 
-          <section id="services" style={{ minHeight: '100vh', padding: '100px 0' }}>
-            <h2>Напрямки</h2>
+          <section id="services">
+            <Directions />
           </section>
 
           <section id="gallery" style={{ minHeight: '100vh', padding: '100px 0' }}>
