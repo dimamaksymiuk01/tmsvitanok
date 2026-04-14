@@ -1,17 +1,16 @@
 .directions {
   padding: 10rem 0;
-  background-color: var(--color-bg); // Або var(--color-white) для контрасту
+  background-color: var(--color-bg);
   position: relative;
   overflow: hidden;
 }
 
-/* === КЛАСИЧНИЙ ЦЕНТРОВАНИЙ ХЕДЕР === */
 .header {
   text-align: center;
   margin-bottom: 6rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .preTitle {
@@ -34,8 +33,7 @@
   }
 }
 
-/* === ВЕЛИКИЙ СПИСОК === */
-.listContainer {
+ .listContainer {
   display: flex;
   flex-direction: column;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -46,7 +44,7 @@
   padding: 3rem 0;
   cursor: pointer;
   display: grid;
-  grid-template-columns: 350px 1fr; // Трохи більше місця для фото
+  grid-template-columns: 350px 1fr;
   gap: 5rem;
   align-items: center;
 
@@ -82,7 +80,6 @@
   border: 1px solid rgba(0,0,0,0.05);
 }
 
-/* === ТЕКСТ === */
 .textWrapper {
   display: flex;
   flex-direction: column;
@@ -98,7 +95,7 @@
 .itemNum {
   font-size: 1.5rem;
   font-weight: 700;
-  color: rgba(234, 182, 118, 0.5); // Напівпрозора теракота
+  color: rgba(234, 182, 118, 0.5);
   font-family: var(--font-heading);
   transition: color 0.3s ease;
 }

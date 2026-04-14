@@ -13,6 +13,10 @@ import dir3 from '../../assets/direction3.jpg';
 import dir4 from '../../assets/direction4.jpg';
 import dir5 from '../../assets/direction5.jpg';
 import dir6 from '../../assets/direction6.jpg';
+import dir7 from '../../assets/direction7.jpg';
+import dir8 from '../../assets/direction8.jpg';
+import dir9 from '../../assets/direction9.jpg';
+import dir10 from '../../assets/direction10.jpg';
 
 const Directions = () => {
   const t = useTranslations('Directions');
@@ -23,12 +27,12 @@ const Directions = () => {
     { num: '01', title: t('item1Title'), desc: t('item1Desc'), image: dir1 },
     { num: '02', title: t('item2Title'), desc: t('item2Desc'), image: dir2 },
     { num: '03', title: t('item3Title'), desc: t('item3Desc'), image: dir5 },
-    { num: '04', title: t('item4Title'), desc: t('item4Desc'), image: dir6 },
+    { num: '04', title: t('item4Title'), desc: t('item4Desc'), image: dir4 },
     { num: '05', title: t('item5Title'), desc: t('item5Desc'), image: dir6 },
-    { num: '06', title: t('item6Title'), desc: t('item6Desc'), image: dir6 },
-    { num: '07', title: t('item7Title'), desc: t('item7Desc'), image: dir6 },
-    { num: '08', title: t('item8Title'), desc: t('item8Desc'), image: dir6 },
-    { num: '09', title: t('item9Title'), desc: t('item9Desc'), image: dir6 },
+    { num: '06', title: t('item6Title'), desc: t('item6Desc'), image: dir10 },
+    { num: '07', title: t('item7Title'), desc: t('item7Desc'), image: dir7 },
+    { num: '08', title: t('item8Title'), desc: t('item8Desc'), image: dir8 },
+    { num: '09', title: t('item9Title'), desc: t('item9Desc'), image: dir9 },
   ];
 
   const textVariants = {
@@ -51,8 +55,7 @@ const Directions = () => {
           </motion.span>
 
           <h2 className={styles.title}>
-            <TypewriterText text={t('title')} tag="span" speed={0.04} />
-            <br />
+            <TypewriterText text={t('title')} tag="span" speed={0.04} />{' '}
             <span className={styles.highlight}>
               <TypewriterText
                 text={t('titleHighlight')}
@@ -84,25 +87,31 @@ const Directions = () => {
                 onMouseLeave={() => setActiveIndex(null)}
                 onClick={() => setActiveIndex(isActive ? null : index)}
               >
+                {/* ВІЗУАЛЬНА ЧАСТИНА
+                  Тепер фото завжди в DOM, тому браузер завантажує їх відразу.
+                  Ми просто робимо їх невидимими (opacity: 0), поки немає ховеру.
+                */}
                 <div className={styles.imageRevealWrapper}>
-                  <AnimatePresence>
-                    {isActive && (
-                      <motion.div
-                        className={styles.revealedImage}
-                        initial={{ opacity: 0, scale: 0.8, x: -50 }}
-                        animate={{ opacity: 1, scale: 1, x: 0 }}
-                        exit={{ opacity: 0, scale: 0.8, x: -50 }}
-                        transition={{ duration: 0.4, ease: 'backOut' }}
-                      >
-                        <Image
-                          src={item.image}
-                          alt={item.title}
-                          fill
-                          style={{ objectFit: 'cover' }}
-                        />
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  <motion.div
+                    className={styles.revealedImage}
+                    initial={{ opacity: 0, scale: 0.8, x: -50 }}
+                    animate={{
+                      opacity: isActive ? 1 : 0,
+                      scale: isActive ? 1 : 0.8,
+                      x: isActive ? 0 : -50,
+                      // Змінюємо pointer-events, щоб невидимі картинки не перекривали кліки
+                      pointerEvents: isActive ? 'auto' : 'none',
+                    }}
+                    transition={{ duration: 0.4, ease: 'backOut' }}
+                  >
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 991px) 0vw, 350px"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </motion.div>
                 </div>
 
                 <div className={styles.textWrapper}>
