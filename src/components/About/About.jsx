@@ -20,9 +20,9 @@ const About = () => {
     t('feature1'),
     t('feature2'),
     t('feature3'),
-    'Емоційний інтелект у вокалі',
-    'Повага до індивідуального темпу',
-    'Спільнота однодумців',
+    t('feature4'),
+    t('feature5'),
+    t('feature6'),
   ];
 
   const textVariants = {

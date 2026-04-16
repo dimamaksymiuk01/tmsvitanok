@@ -17,14 +17,17 @@
     "connect": "Connect"
   },
   "About": {
-    "preTitle": "Our philosophy",
-    "title": "More than simple",
+    "preTitle": "Our Philosophy",
+    "title": "More than just a",
     "titleHighlight": "workshop",
-    "description1": "Svitanok - is a space created with love for details and boundless respect for art. We believe that every voice should sound special, so we have created ideal conditions where your true potential is revealed.",
-    "description2": "Our team is a small creative family. We combine a professional approach, modern methods and an incredibly warm atmosphere so that each lesson inspires you to new achievements and gives joy.",
+    "description1": "\"Svitanok\" is a space created with love for details and boundless respect for art. We believe that every voice should sound special, so we have created the perfect conditions for your true potential to unfold.",
+    "description2": "Our team is a small creative family. We combine a professional approach, modern techniques, and an incredibly warm atmosphere so that every lesson inspires you to new achievements and brings joy.",
     "feature1": "Creative freedom",
     "feature2": "Professional mentors",
-    "feature3": "Unique atmosphere"
+    "feature3": "Unique atmosphere",
+    "feature4": "Emotional intelligence in vocals",
+    "feature5": "Respect for individual pace",
+    "feature6": "Community of like-minded people"
   },
   "Directions": {
     "preTitle": "Workshop Directions",
@@ -48,5 +51,32 @@
     "item8Desc": "Piano and guitar lessons. From your first chords to confidently playing your favorite melodies with an understanding of music theory.",
     "item9Title": "Acting & Drama",
     "item9Desc": "Unleashing charisma, releasing physical tension, and mastering stage speech. Learn to improvise and confidently hold an audience."
+  },
+  "Gallery": {
+    "preTitle": "Our Moments",
+    "title": "Take a look inside",
+    "titleHighlight": "workshop",
+    "showMore": "Show more",
+    "vocalKidsAdults": "Vocal for everyone",
+    "vocalEnsembleSvitanok": "Ensemble Svitanok",
+    "successfulStudentClub": "Student Club",
+    "logopedics": "Speech therapy",
+    "earlyMusicDevelopment": "Early development",
+    "fineArts": "Fine arts"
+  },
+  "Contacts": {
+    "preTitle": "Get in touch",
+    "title": "Let's",
+    "titleHighlight": "create",
+    "emailLabel": "Drop us a line",
+    "socialLabel": "Follow us",
+    "location1Title": "Rivne Studio",
+    "location1Address": "Rivne, Soborna St, 112 (near the Drama Theater)",
+    "location1Phone": "+38 (098) 123-45-67",
+    "location2Title": "Zoria Studio",
+    "location2Address": "Zoria (Rivne district), Zhovtneva Sq, 1 (Palace of Culture)",
+    "location2Phone": "+38 (050) 765-43-21",
+    "desc": "Creative workshop Svitanok by Olena Yesyp. All rights reserved.",
+    "createdBy": "Created by"
   }
 }

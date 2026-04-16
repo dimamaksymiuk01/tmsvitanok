@@ -7,6 +7,8 @@ import Hero from '@/components/Hero/Hero';
 import About from '@/components/About/About';
 import ScrollProgress from '@/components/ScrollProgress/ScrollProgress';
 import Directions from '@/components/Directions/Directions';
+import Gallery from '@/components/Gallery/Gallery';
+import Contacts from '@/components/Contacts/Contacts';
 
 const Home = () => {
   const [isLoaderFinished, setIsLoaderFinished] = useState(false);
@@ -40,12 +42,12 @@ const Home = () => {
             <Directions />
           </section>
 
-          <section id="gallery" style={{ minHeight: '100vh', padding: '100px 0' }}>
-            <h2>Галерея</h2>
+          <section id="gallery">
+            <Gallery/>
           </section>
 
-          <section id="contacts" style={{ minHeight: '100vh', padding: '100px 0' }}>
-            <h2>Контакти</h2>
+          <section id="contacts">
+            <Contacts/>
           </section>
         </main>
       </div>

@@ -21,6 +21,7 @@ const Header = () => {
     { id: 'about', label: t('about') },
     { id: 'services', label: t('services') },
     { id: 'gallery', label: t('gallery') },
+    { id: 'contacts', label: t('contacts') },
   ];
 
   useEffect(() => {

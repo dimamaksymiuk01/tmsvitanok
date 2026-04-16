@@ -30,7 +30,9 @@ export default async function LocaleLayout({ children, params }) {
   return (
     <html lang={locale} className={`${yesevaOne.variable} ${nunito.variable}`}>
       <body>
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
