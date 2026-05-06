@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const isUk = locale === 'uk';
 
-  // Базовий URL вашого сайту (змініть на реальний домен після публікації)
+  // Базовий URL вашого сайту
   const baseUrl = 'https://tmsvitanok.vercel.app';
 
   return {
@@ -37,13 +37,6 @@ export async function generateMetadata({ params }) {
       ? ['творча майстерня', 'Світанок', 'вокал Рівне', 'вокал Зоря', 'логопед Рівне', 'ранній розвиток', 'Олена Єсип', 'художнє мистецтво', 'підготовка до школи']
       : ['creative workshop', 'Svitanok', 'vocal lessons Rivne', 'speech therapy', 'early development', 'Olena Yesyp', 'fine arts', 'preschool preparation'],
 
-    /* === ДОДАНО БЛОК З ФАВІКОНКАМИ === */
-    icons: {
-      icon: '/logo.png', // Стандартна іконка для вкладки браузера
-      shortcut: '/logo.png', // Для деяких інших браузерів
-      apple: '/logo.png', // Іконка для iOS (при додаванні на екран "Додому")
-    },
-
     openGraph: {
       title: isUk ? 'Творча Майстерня «Світанок»' : 'Svitanok Creative Workshop',
       description: isUk
@@ -53,7 +46,7 @@ export async function generateMetadata({ params }) {
       siteName: isUk ? 'Світанок' : 'Svitanok',
       images: [
         {
-          url: `${baseUrl}/logo.png`, // Логотип для прев'ю в соцмережах
+          url: `${baseUrl}/icon.png`, // ТУТ ВСЕ ПРАВИЛЬНО
           width: 800,
           height: 600,
           alt: 'Svitanok Logo',
@@ -84,7 +77,7 @@ export default async function LocaleLayout({ children, params }) {
       "name": "Олена Єсип",
       "alternateName": "Olena Yesyp"
     },
-    "logo": `${baseUrl}/logo.png`,
+    "logo": `${baseUrl}/icon.png`, // ТУТ ВСЕ ПРАВИЛЬНО
     "url": baseUrl,
     "sameAs": [
       "https://www.instagram.com/olena.esip?igsh=MXN0a3pwMTY0MnhuYg==",
@@ -133,6 +126,9 @@ export default async function LocaleLayout({ children, params }) {
   return (
     <html lang={locale} className={`${yesevaOne.variable} ${nunito.variable}`}>
     <head>
+      <link rel="icon" href="/icon.png" type="image/png" />
+      <link rel="apple-touch-icon" href="/icon.png" />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
