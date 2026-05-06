@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
   const isUk = locale === 'uk';
 
   // Базовий URL вашого сайту (змініть на реальний домен після публікації)
-  const baseUrl = 'https://tmsvitanok.com.ua';
+  const baseUrl = 'https://tmsvitanok.vercel.app';
 
   return {
     title: isUk
