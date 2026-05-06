@@ -32,7 +32,7 @@
 }
 
 .title {
-  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-size: clamp(2.5rem, 8vw, 5.5rem); // Оновлено для мобільних
   line-height: 1.1;
   color: var(--color-text-dark);
   font-family: var(--font-heading);
@@ -43,7 +43,6 @@
     font-style: italic;
   }
 }
-
 .generalInfo {
   display: flex;
   flex-direction: column;
@@ -111,7 +110,7 @@
 .socialLinks {
   display: flex;
   align-items: center;
-  gap: 1.5rem; // Трохи збільшив відступ
+  gap: 1rem;
 }
 
 .dot {
@@ -139,6 +138,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
+  .locationTitleContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
   .titleIcon {
     width: 28px;
@@ -186,7 +191,7 @@
   }
 
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 23px;
     .phoneIcon {
       width: 28px;
       height: 28px;

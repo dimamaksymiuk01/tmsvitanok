@@ -6,6 +6,7 @@ import TypewriterText from '../TypewriterText/TypewriterText';
 import styles from './Contacts.module.scss';
 import { FaViber, FaTelegramPlane, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { FiMail, FiMapPin, FiPhoneCall } from 'react-icons/fi';
+import Link from 'next/link';
 
 const Contacts = () => {
   const t = useTranslations('Contacts');
@@ -49,21 +50,25 @@ const Contacts = () => {
             <motion.div variants={textVariants} className={styles.generalInfo}>
               <div className={styles.infoBlock}>
                 <span className={styles.label}>{t('emailLabel')}</span>
-                <a href="mailto:hello@svitanok.rv.ua" className={styles.link}>
+                <a href="mailto:ms.olenkivna@gmail.com" target="_blank" rel="noopener noreferrer" className={styles.link}>
                   <FiMail className={styles.icon} />
-                  hello@svitanok.rv.ua
+                  ms.olenkivna@gmail.com
+                </a>
+                <a href="mailto:ms.olenkivna@ukr.net" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                  <FiMail className={styles.icon} />
+                  ms.olenkivna@ukr.net
                 </a>
               </div>
 
               <div className={styles.infoBlock}>
                 <span className={styles.label}>{t('socialLabel')}</span>
                 <div className={styles.socialLinks}>
-                  <a href="https://instagram.com/" target="_blank" rel="noreferrer" className={styles.socialLink}>
+                  <a href="https://www.instagram.com/olena.esip?igsh=MXN0a3pwMTY0MnhuYg==" target="_blank" rel="noreferrer" className={styles.socialLink}>
                     <FaInstagram className={styles.icon} />
                     Instagram
                   </a>
                   <span className={styles.dot}>•</span>
-                  <a href="https://facebook.com" target="_blank" rel="noreferrer" className={styles.socialLink}>
+                  <a href="https://www.facebook.com/share/1BrvtQG7Sn/" target="_blank" rel="noreferrer" className={styles.socialLink}>
                     <FaFacebookF className={styles.icon} />
                     Facebook
                   </a>
@@ -82,22 +87,24 @@ const Contacts = () => {
             {/* Локація 1 (Рівне) */}
             <motion.div variants={textVariants} className={styles.locationBlock}>
               <h3 className={styles.locationTitle}>
+                <Link className={styles.locationTitleContainer} target="_blank" rel="noopener noreferrer" href={'https://maps.app.goo.gl/EE6DmhGgr5MY7mjn7'}>
                 <FiMapPin className={styles.titleIcon} />
                 {t('location1Title')}
+                </Link>
               </h3>
               <p className={styles.locationAddress}>{t('location1Address')}</p>
 
               <div className={styles.contactMethods}>
-                <a href={`tel:${t('location1Phone').replace(/[^0-9+]/g, '')}`} className={styles.phoneLink}>
+                <a href={`tel:${t('location1Phone').replace(/[^0-9+]/g, '')}`} target="_blank" rel="noopener noreferrer" className={styles.phoneLink}>
                   <FiPhoneCall className={styles.phoneIcon} />
                   {t('location1Phone')}
                 </a>
                 <div className={styles.messengers}>
-                  <a href="viber://chat?number=%2B380981234567" className={styles.messengerIcon} title="Viber">
+                  <a href="viber://chat?number=%2B380964417738" target="_blank" rel="noopener noreferrer" className={styles.messengerIcon} title="Viber">
                     <FaViber className={styles.iconSm} />
                     Viber
                   </a>
-                  <a href="https://t.me/+380981234567" className={styles.messengerIcon} title="Telegram">
+                  <a href="https://t.me/+380964417738" target="_blank" rel="noopener noreferrer" className={styles.messengerIcon} title="Telegram">
                     <FaTelegramPlane className={styles.iconSm} />
                     Telegram
                   </a>
@@ -110,22 +117,24 @@ const Contacts = () => {
             {/* Локація 2 (Зоря) */}
             <motion.div variants={textVariants} className={styles.locationBlock}>
               <h3 className={styles.locationTitle}>
+                <Link className={styles.locationTitleContainer} target="_blank" rel="noopener noreferrer" href={'https://maps.app.goo.gl/EE6DmhGgr5MY7mjn7'}>
                 <FiMapPin className={styles.titleIcon} />
                 {t('location2Title')}
+                </Link>
               </h3>
               <p className={styles.locationAddress}>{t('location2Address')}</p>
 
               <div className={styles.contactMethods}>
-                <a href={`tel:${t('location2Phone').replace(/[^0-9+]/g, '')}`} className={styles.phoneLink}>
+                <a href={`tel:${t('location2Phone').replace(/[^0-9+]/g, '')}`} target="_blank" rel="noopener noreferrer" className={styles.phoneLink}>
                   <FiPhoneCall className={styles.phoneIcon} />
                   {t('location2Phone')}
                 </a>
                 <div className={styles.messengers}>
-                  <a href="viber://chat?number=%2B380507654321" className={styles.messengerIcon} title="Viber">
+                  <a href="viber://chat?number=%2B380964417738" target="_blank" rel="noopener noreferrer" className={styles.messengerIcon} title="Viber">
                     <FaViber className={styles.iconSm} />
                     Viber
                   </a>
-                  <a href="https://t.me/+380507654321" className={styles.messengerIcon} title="Telegram">
+                  <a href="https://t.me/+380964417738" className={styles.messengerIcon} target="_blank" rel="noopener noreferrer" title="Telegram">
                     <FaTelegramPlane className={styles.iconSm} />
                     Telegram
                   </a>

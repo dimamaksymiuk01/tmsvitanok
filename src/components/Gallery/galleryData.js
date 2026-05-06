@@ -10,6 +10,7 @@ export const galleryData = [
   { id: 108, category: 'vokalDlyaDiteyTaDoroslykh', type: 'image', src: '/gallery/vokalDlyaDiteyTaDoroslykh/IMG-ecbb4d1cee902307fe387f5bf832e46d-V.jpg' },
   { id: 109, category: 'vokalDlyaDiteyTaDoroslykh', type: 'image', src: '/gallery/vokalDlyaDiteyTaDoroslykh/IMG_20251214_233848_331.jpg' },
   { id: 110, category: 'vokalDlyaDiteyTaDoroslykh', type: 'image', src: '/gallery/vokalDlyaDiteyTaDoroslykh/IMG_20251223_130523_078.jpg' },
+  { id: 501, category: 'vokalDlyaDiteyTaDoroslykh', type: 'video', videoId: 'HN5hMgCyVSs' },
 
   // === ВОКАЛЬНИЙ АНСАМБЛЬ ===
   { id: 201, category: 'vokalniyAnsamblSvitanok', type: 'image', src: '/gallery/vokalniyAnsamblSvitanok/IMG-0da87d6535bcb1b4d21e15cc363fcbf5-V.jpg' },
@@ -38,7 +39,6 @@ export const galleryData = [
   { id: 405, category: 'logopedichniZanyattya', type: 'video', videoId: 'fjdIogDsbZw' },
 
   // === РАННІЙ МУЗ. РОЗВИТОК (ВІДЕО + ФОТО) ===
-  { id: 501, category: 'ranniyMuzychniyRozvytok', type: 'video', videoId: 'HN5hMgCyVSs' },
   { id: 502, category: 'ranniyMuzychniyRozvytok', type: 'video', videoId: '4GtSGqJY_qA' },
   { id: 503, category: 'ranniyMuzychniyRozvytok', type: 'video', videoId: 'm2p8xCo8_yU' },
   { id: 504, category: 'ranniyMuzychniyRozvytok', type: 'video', videoId: 'lMWH3xiiWAw' },

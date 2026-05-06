@@ -106,13 +106,15 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                   >
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/olena.esip?igsh=MXN0a3pwMTY0MnhuYg=="  target="_blank" rel="noopener noreferrer">
                       Instagram
                     </a>
-                    <a href="https://t.me" target="_blank" rel="noopener noreferrer">
+                    <a href="https://t.me/+380964417738" target="_blank" rel="noopener noreferrer">
                       Telegram
                     </a>
-                    <a href="viber://chat?number=">Viber</a>
+                    <a href="viber://chat?number=%2B380964417738">
+                      Viber
+                    </a>
                     <a href="#contacts" onClick={() => setIsDropdownOpen(false)}>
                       {t('contacts')}
                     </a>
@@ -168,10 +170,10 @@ const Header = () => {
               <motion.div className={styles.mobileFooter} variants={itemVariants}>
                 <LanguageSwitcher />
                 <div className={styles.mobileSocials}>
-                  <a href="#" target="_blank">
+                  <a href="https://www.instagram.com/olena.esip?igsh=MXN0a3pwMTY0MnhuYg=="  target="_blank" rel="noopener noreferrer">
                     Instagram
                   </a>
-                  <a href="#" target="_blank">
+                  <a href="https://www.facebook.com/share/1BrvtQG7Sn/" target="_blank" rel="noopener noreferrer">
                     Facebook
                   </a>
                 </div>
